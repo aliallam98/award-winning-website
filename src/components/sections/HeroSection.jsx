@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import Button from "../common/Button.jsx";
-import { TiLocationArrow } from "react-icons/ti";
 import HeroHeadingContainer from "../HeroHeadingContainer.jsx";
 import HeroBottomRightHeading from "../HeroBottomRightHeading.jsx";
 import { useGSAP } from "@gsap/react";
