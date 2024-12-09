@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  scroll-behavior: smooth;
+}
 body {
   width: 100dvw;
   overflow-x: hidden;
@@ -131,7 +135,7 @@ body {
   }
 
   .sword-man-clip-path {
-    clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
+    clip-path: polygon(1% 0, 89% 15%, 100% 100%, 0 88%);
   }
 
   .contact-clip-path-1 {
@@ -270,4 +274,19 @@ body {
     transform: translateY(66%) scale(0.65);
     opacity: 0.8;
   }
+}
+
+.button-hover-polygon {
+  clip-path: polygon(0 8%, 100% 26%, 100% 85%, 0 96%);
+  -webkit-clip-path: polygon(0 8%, 100% 26%, 100% 85%, 0 96%);
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+  background-color: red;
+
+}
+
+.button-default-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 70%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 70%);
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+  background-color: red;
 }

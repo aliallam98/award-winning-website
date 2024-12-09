@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+const AnimatedHeading = ({ title, containerClass }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -36,7 +36,13 @@ const AnimatedTitle = ({ title, containerClass }) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={clsx("animated-title", containerClass)}>
+    <div
+      ref={containerRef}
+      className={clsx(
+        "flex flex-col gap-1 text-5xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem]",
+        containerClass
+      )}
+    >
       {title.split("<br />").map((line, index) => (
         <div
           key={index}
@@ -55,4 +61,4 @@ const AnimatedTitle = ({ title, containerClass }) => {
   );
 };
 
-export default AnimatedTitle;
+export default AnimatedHeading;
